@@ -1,0 +1,203 @@
+{
+  "environment": {
+    "python": "3.13.5",
+    "platform": "linux",
+    "host": "127.0.0.1 (loopback)",
+    "cpu_user_s": 14.051838,
+    "cpu_sys_s": 4.237239,
+    "max_rss_MB": 253.6171875
+  },
+  "E1": {
+    "table": [
+      {
+        "channels": 1020,
+        "fs_Hz": 20000,
+        "bytes_per_sample": 2,
+        "GB_per_hour": 146.88,
+        "Mbit_per_s": 326.4,
+        "hours_over_100Mbps": 3.472340425531915,
+        "minutes_over_1Gbps": 20.834042553191487,
+        "minutes_over_10Gbps": 2.083404255319149
+      },
+      {
+        "channels": 1020,
+        "fs_Hz": 30000,
+        "bytes_per_sample": 2,
+        "GB_per_hour": 220.32,
+        "Mbit_per_s": 489.6,
+        "hours_over_100Mbps": 5.208510638297873,
+        "minutes_over_1Gbps": 31.251063829787235,
+        "minutes_over_10Gbps": 3.125106382978723
+      },
+      {
+        "channels": 1024,
+        "fs_Hz": 20000,
+        "bytes_per_sample": 1.25,
+        "GB_per_hour": 92.16,
+        "Mbit_per_s": 204.8,
+        "hours_over_100Mbps": 2.178723404255319,
+        "minutes_over_1Gbps": 13.072340425531914,
+        "minutes_over_10Gbps": 1.3072340425531914
+      }
+    ],
+    "check_130GB": {
+      "report_GB_per_hour": 130,
+      "hours_at_100Mbps": 3.0732860520094563,
+      "minutes_at_1Gbps": 18.43971631205674,
+      "Gbps_needed_for_10_minutes": 1.7333333333333332
+    }
+  },
+  "E2": {
+    "frame_bytes": 40840,
+    "frames": 1000,
+    "receiver_keeps_up": {
+      "recv_calls": 998,
+      "recv_returned_exactly_one_frame": 985,
+      "recv_calls_starting_at_a_frame_header": 991,
+      "recv_size_median": 40840.0
+    },
+    "receiver_briefly_busy": {
+      "recv_calls": 627,
+      "recv_returned_exactly_one_frame": 10,
+      "recv_calls_starting_at_a_frame_header": 11,
+      "recv_size_median": 65536.0
+    }
+  },
+  "E3": {
+    "rows": [
+      {
+        "offered_MBps": 20.4,
+        "tcp_goodput_MBps": 20.55521357910539,
+        "tcp_p99_ms": 9.051995900000035,
+        "udp_goodput_MBps": 20.313220713299657,
+        "udp_loss": 0.004264705882352948,
+        "udp_chunks_complete": 97,
+        "udp_p99_ms": 20.05949035999999
+      },
+      {
+        "offered_MBps": 40.8,
+        "tcp_goodput_MBps": 41.026473518587835,
+        "tcp_p99_ms": 15.497994670000027,
+        "udp_goodput_MBps": 39.804425405881595,
+        "udp_loss": 0.02438235294117652,
+        "udp_chunks_complete": 76,
+        "udp_p99_ms": 10.1896235
+      },
+      {
+        "offered_MBps": 81.6,
+        "tcp_goodput_MBps": 81.32495282883646,
+        "tcp_p99_ms": 16.934974260000008,
+        "udp_goodput_MBps": 52.3676446282099,
+        "udp_loss": 0.1828823529411765,
+        "udp_chunks_complete": 2,
+        "udp_p99_ms": 133.89237269999998
+      },
+      {
+        "offered_MBps": 163.2,
+        "tcp_goodput_MBps": 78.16336746117099,
+        "tcp_p99_ms": 272.88456571,
+        "udp_goodput_MBps": 57.79569179701838,
+        "udp_loss": 0.1745882352941176,
+        "udp_chunks_complete": 3,
+        "udp_p99_ms": 269.12564854
+      }
+    ],
+    "note": "localhost; UDP loss is in the local receive path, not necessarily on the network; results depend on CPU and OS buffers"
+  },
+  "E4": {
+    "process_ms": 12.0,
+    "tcp_baseline": {
+      "protocol": "TCP",
+      "chunks_sent": 300,
+      "chunks_received": 300,
+      "in_order": true,
+      "crc_all_ok": true,
+      "offered_MBps": 40.8,
+      "goodput_MBps": 40.8698928025318,
+      "latency": {
+        "median_ms": 4.618845,
+        "p95_ms": 6.680253650000002,
+        "p99_ms": 10.119188809999992,
+        "max_ms": 14.941646
+      },
+      "jitter_ms": 0.820028885309396,
+      "max_send_block_ms": 0.923196,
+      "max_send_queue_bytes": 408040,
+      "max_recv_queue_bytes": 0,
+      "same_host_clock": true
+    },
+    "tcp": {
+      "protocol": "TCP",
+      "chunks_sent": 300,
+      "chunks_received": 300,
+      "in_order": true,
+      "crc_all_ok": true,
+      "offered_MBps": 40.8,
+      "goodput_MBps": 32.51020701242977,
+      "latency": {
+        "median_ms": 383.2118875,
+        "p95_ms": 725.5698965500001,
+        "p99_ms": 755.56933922,
+        "max_ms": 762.808357
+      },
+      "jitter_ms": 2.5299208500127,
+      "max_send_block_ms": 17.944359,
+      "max_send_queue_bytes": 488665,
+      "max_recv_queue_bytes": 408040,
+      "same_host_clock": true
+    },
+    "udp": {
+      "protocol": "UDP",
+      "target_MBps": 40.8,
+      "generation_MBps": 40.8,
+      "datagrams_expected": 102000,
+      "datagrams_received": 84702,
+      "loss_rate": 0.1695882352941176,
+      "chunks_complete": 147,
+      "chunks_sent": 300,
+      "reordered": 0,
+      "duplicates": 0,
+      "invalid_datagrams": 0,
+      "crc_failures": 0,
+      "goodput_MBps": 33.842275465232014,
+      "latency_complete_chunks": {
+        "median_ms": 9.990487,
+        "p95_ms": 10.183861199999999,
+        "p99_ms": 11.709910439999996,
+        "max_ms": 20.698553
+      },
+      "jitter_ms": 0.05718931798984185,
+      "max_recv_queue_bytes": 1240,
+      "same_host_clock": true
+    }
+  },
+  "E5": {
+    "udp": {
+      "protocol": "UDP",
+      "target_MBps": 2.56,
+      "generation_MBps": 2.56,
+      "datagrams_expected": 4400,
+      "datagrams_received": 3624,
+      "loss_rate": 0.1763636363636364,
+      "chunks_complete": 112,
+      "chunks_sent": 200,
+      "reordered": 0,
+      "duplicates": 0,
+      "invalid_datagrams": 0,
+      "crc_failures": 0,
+      "goodput_MBps": 2.0821181528942017,
+      "latency_complete_chunks": {
+        "median_ms": 20.499506,
+        "p95_ms": 31.29486845,
+        "p99_ms": 31.569573360000003,
+        "max_ms": 31.611306
+      },
+      "jitter_ms": 8.759567465327246,
+      "max_recv_queue_bytes": 1240,
+      "same_host_clock": true
+    },
+    "missing_sample_fraction": 0.17843750000000003,
+    "spikes_sent": 93,
+    "spikes_detected_after_loss": 80
+  }
+}

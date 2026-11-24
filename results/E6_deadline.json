@@ -1,0 +1,102 @@
+{
+ "setup": {
+  "packets": 1000,
+  "interval_ms": 5.0,
+  "one_way_delay_ms": 20.0,
+  "loss_rate": 0.1,
+  "fec_group": 4,
+  "note": "drops emulated in an application relay on 127.0.0.1"
+ },
+ "runs": [
+  {
+   "loss": "independent",
+   "scheme": "none",
+   "bandwidth_ratio": 1.0,
+   "delivered_by_deadline": {
+    "25": 0.896,
+    "50": 0.898,
+    "75": 0.898,
+    "100": 0.898,
+    "150": 0.898,
+    "200": 0.898,
+    "400": 0.898
+   },
+   "median_ms_delivered": 20.3
+  },
+  {
+   "loss": "independent",
+   "scheme": "fec",
+   "bandwidth_ratio": 1.25,
+   "delivered_by_deadline": {
+    "25": 0.916,
+    "50": 0.965,
+    "75": 0.965,
+    "100": 0.965,
+    "150": 0.965,
+    "200": 0.965,
+    "400": 0.965
+   },
+   "median_ms_delivered": 20.3
+  },
+  {
+   "loss": "independent",
+   "scheme": "arq",
+   "bandwidth_ratio": 1.113,
+   "delivered_by_deadline": {
+    "25": 0.898,
+    "50": 0.898,
+    "75": 0.986,
+    "100": 0.987,
+    "150": 0.996,
+    "200": 0.999,
+    "400": 1.0
+   },
+   "median_ms_delivered": 20.3
+  },
+  {
+   "loss": "bursts (mean 10 packets)",
+   "scheme": "none",
+   "bandwidth_ratio": 1.0,
+   "delivered_by_deadline": {
+    "25": 0.909,
+    "50": 0.909,
+    "75": 0.909,
+    "100": 0.909,
+    "150": 0.909,
+    "200": 0.909,
+    "400": 0.909
+   },
+   "median_ms_delivered": 20.3
+  },
+  {
+   "loss": "bursts (mean 10 packets)",
+   "scheme": "fec",
+   "bandwidth_ratio": 1.25,
+   "delivered_by_deadline": {
+    "25": 0.924,
+    "50": 0.925,
+    "75": 0.925,
+    "100": 0.925,
+    "150": 0.925,
+    "200": 0.925,
+    "400": 0.925
+   },
+   "median_ms_delivered": 20.3
+  },
+  {
+   "loss": "bursts (mean 10 packets)",
+   "scheme": "arq",
+   "bandwidth_ratio": 1.091,
+   "delivered_by_deadline": {
+    "25": 0.913,
+    "50": 0.913,
+    "75": 0.932,
+    "100": 0.963,
+    "150": 0.993,
+    "200": 0.999,
+    "400": 1.0
+   },
+   "median_ms_delivered": 20.3
+  }
+ ]
+}
