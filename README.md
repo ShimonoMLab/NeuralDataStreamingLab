@@ -77,8 +77,9 @@ this is a useful classroom consistency check, not a claim about the hardware.
   Two-host LAN experiments are **not implemented or validated** in this release.
 - E6 drops packets in an **application relay on 127.0.0.1** (fixed 20-ms
   one-way delay, 10 % loss); it teaches sequence numbers, NACK/timeout
-  retransmission and parity, but it is not TCP's own retransmission and has no
-  congestion control. One example run is in `results/E6_deadline.json`.
+  retransmission and parity, but it is not TCP's own retransmission, does not
+  use RTP/RTCP (RFC 3550/4585) or a standard FEC format, and has no congestion
+  control. One example run is in `results/E6_deadline.json`.
 - This version does **not** inspect TCP congestion window (`cwnd`), the kernel's TCP
   retransmissions, Reno/CUBIC algorithm choice, or IP routing. Those are
   possible later lessons, **not demonstrated results**.
